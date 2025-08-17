@@ -1,38 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Meeting Summarizer
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).  
+It is a **Full-Stack AI-powered Meeting Notes Summarizer and Sharer** using FastAPI as the backend.
 
 ## Getting Started
 
-First, run the development server:
+### Backend
 
+1. Navigate to the backend folder:
 ```bash
+cd backend
+Create a virtual environment:
+
+bash
+Copy code
+python -m venv venv
+Activate the environment:
+
+Windows:
+
+bash
+Copy code
+venv\Scripts\activate
+Linux/Mac:
+
+bash
+Copy code
+source venv/bin/activate
+Install dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+Create a .env file with your API keys:
+
+ini
+Copy code
+OPENAI_API_KEY=your_openai_api_key
+GROQ_API_KEY=your_groq_api_key
+RESEND_API_KEY=your_resend_api_key
+RESEND_FROM="Meeting Bot <onboarding@resend.dev>"
+Run the backend server:
+
+bash
+Copy code
+uvicorn main:app --reload
+Frontend
+Navigate to the project root:
+
+bash
+Copy code
+cd ai_summarizer
+Install frontend dependencies:
+
+bash
+Copy code
+npm install
+Run the development server:
+
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Usage
+Upload your meeting transcript or paste it in the text box.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Provide a custom instruction (optional).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Click Generate Summary to get AI-generated meeting notes.
 
-## Learn More
+Edit the summary if needed.
 
-To learn more about Next.js, take a look at the following resources:
+Enter recipient emails and click Send Email to share.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Learn More
+To learn more about Next.js, FastAPI, or the tools used:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Next.js Documentation - learn about Next.js features and API.
 
-## Deploy on Vercel
+FastAPI Documentation - learn about FastAPI features and API.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+OpenAI API Documentation - for GPT models integration.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# ai_summarizer" 
-"# ai_summarizer" 
+Groq AI Documentation - for Groq LLM integration.
+
+Deploy on Vercel
+The easiest way to deploy your Next.js frontend is to use the Vercel Platform.
+Check out the Next.js deployment documentation for more details.
+
+The backend can be deployed on Render, Railway, or any cloud provider that supports FastAPI.
+
+Project Documentation
+Check Project_documentation.docx or Project_documentation.pdf for a detailed explanation of the approach, tech stack, and architecture.
