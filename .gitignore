@@ -9,6 +9,17 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Node
+node_modules/
+
+# Env
+*.env
+
 
 # testing
 /coverage
